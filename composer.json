@@ -1,8 +1,12 @@
 {
-    "name": "rebing/graphql-laravel",
-    "description": "Laravel wrapper for PHP GraphQL",
-    "keywords": ["framework", "laravel", "graphql", "react"],
+    "name": "rebing/graphql-lumen",
+    "description": "Laravel wrapper for PHP GraphQL - Added Lumen Support",
+    "keywords": ["framework", "laravel", "graphql", "react", "lumen"],
     "authors": [
+        {
+            "name": "Asep Muhamad",
+            "email": "asepmuhamad@gmail.com",
+        },
         {
             "name": "Rebing OÜ",
             "homepage": "http://www.rebing.ee",
@@ -76,9 +80,6 @@
         ]
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "8.6-dev"
-        },
         "laravel": {
             "providers": [
                 "Rebing\\GraphQL\\GraphQLServiceProvider"
