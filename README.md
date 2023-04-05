@@ -2871,3 +2871,10 @@ public function resolve($root, array $args)
 ## GraphQL testing clients
  - [Firecamp](https://firecamp.io/graphql)
  - [GraphiQL](https://github.com/graphql/graphiql)
+
+## Lumen Notes ***
+
+- Modify and/or make sure `bootstrap/app.php` has facade enabled (`$app->withFacades()`) and registered Auth Service (`$app->register(App\Providers\AuthServiceProvider::class)`)
+- Manually register GraphQL Service `$app->register(Rebing\GraphQL\GraphQLServiceProvider::class)` into `bootstrap/app.php` file
+- Optionally copy config file of this library (`graphql.php`) into `config` folder
+
