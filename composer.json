@@ -1,5 +1,5 @@
 {
-    "name": "rebing/graphql-lumen",
+    "name": "asmud/graphql-lumen",
     "description": "Laravel wrapper for PHP GraphQL - Added Lumen Support",
     "keywords": ["framework", "laravel", "graphql", "react", "lumen"],
     "authors": [
