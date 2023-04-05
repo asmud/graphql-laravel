@@ -4,10 +4,11 @@ declare(strict_types = 1);
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Config\Repository;
-use Illuminate\Routing\Router;
+use Laravel\Lumen\Routing\Router;
 use Rebing\GraphQL\GraphQL;
 use Rebing\GraphQL\GraphQLController;
 
+$container = Container::getInstance();
 /** @var Repository $config */
 $config = Container::getInstance()->make(Repository::class);
 
@@ -15,7 +16,7 @@ $routeConfig = $config->get('graphql.route');
 
 if ($routeConfig) {
     /** @var Router $router */
-    $router = app('router');
+    $router = $container->make('router');
 
     $routeGroupAttributes = array_merge(
         [
@@ -65,7 +66,7 @@ if ($routeConfig) {
 
 if ($config->get('graphql.graphiql.display', true)) {
     /** @var Router $router */
-    $router = app('router');
+    $router = $container->make('router');
     $graphiqlConfig = $config->get('graphql.graphiql');
 
     $router->group(

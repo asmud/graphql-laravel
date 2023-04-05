@@ -9,7 +9,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use Laravel\Lumen\Routing\Controller;
 use Illuminate\Support\Str;
 use Laragraph\Utils\RequestParser;
 use Rebing\GraphQL\Support\OperationParams;

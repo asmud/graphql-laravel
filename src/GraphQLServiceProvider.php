@@ -21,6 +21,7 @@ use Rebing\GraphQL\Console\ScalarMakeCommand;
 use Rebing\GraphQL\Console\SchemaConfigMakeCommand;
 use Rebing\GraphQL\Console\TypeMakeCommand;
 use Rebing\GraphQL\Console\UnionMakeCommand;
+use Rebing\GraphQL\Support\AppVersion;
 
 class GraphQLServiceProvider extends ServiceProvider
 {
@@ -39,6 +40,10 @@ class GraphQLServiceProvider extends ServiceProvider
      */
     protected function bootRouter(): void
     {
+        if (AppVersion::isLumen()) {
+            require \Safe\realpath(__DIR__ . '/routes.php');
+            return;
+        }
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
     }
 
